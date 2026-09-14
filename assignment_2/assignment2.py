@@ -19,7 +19,7 @@ padded_image = padding(image, 100)
 cv2.imwrite("solutions/padded_image.png", padded_image)
 
 
-#iii
+#crop
 
 def crop(image, x_0, x_1, y_0, y_1):
     cropped_image = image[y_0:y_1, x_0:x_1]
@@ -31,7 +31,7 @@ cropped_image = crop(image, 200, width - 130, 200, height -130)
 
 cv2.imwrite("solutions/cropped_image.png", cropped_image)
 
-#iii
+#reize
 def resize(image, width, height):
     resized_image = cv2.resize(image, (width, height))
     return resized_image
@@ -40,7 +40,7 @@ resized_image = resize(image, 200, 200)
 cv2.imwrite("solutions/resized_image.png", resized_image)
 
 
-#iiii
+#copy
 height, width, channels = image.shape
 
 EmptyPictureArray = np.zeros((height, width, 3), dtype = np.uint8)
